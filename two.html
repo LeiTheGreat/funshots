@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photoshoot</title>
+    
+    <style>
+
+        /* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: #0b0b10;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00ffd5; /* optional nice border */
+    background: #fff; /* optional if logo has transparent edges */
+}
+
+.funshots {
+    color: white;
+}
+
+.navbar nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: #00ffd5;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h1, p {
+    text-align: center;
+    color: #333;
+}
+
+.album-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2a2a2a;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #888;
+}
+
+/* Photo gallery grid */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px; /* Fixed height */
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the image stays within the container without being cropped */
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.photo-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .album-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .photo-item {
+        height: 250px; /* Adjust the height for smaller screens */
+    }
+
+    .photo-item img {
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+}
+    </style>
+
+</head>
+<body>
+
+        <header class="navbar">
+      <div class="logo-area">
+        <img src="funshots.jpg" alt="FunShots Logo" class="logo" />
+        <h1 class="funshots">FunShots</h1>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html">Inquire</a>
+        <a
+          href="https://web.facebook.com/profile.php?id=100066590085165"
+          target="_blank"
+          >Facebook</a
+        >
+      </nav>
+    </header>
+
+    <div class="album-container">
+        <header>
+            <h1>Photoshoot</h1>
+            <p>Click on the photos to view them in full size.</p>
+        </header>
+
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <a href="photo1.jpg" target="_blank">
+                    <img src="photo1.jpg" alt="Photo 1">
+                </a>
+            </div>
+            <div class="photo-item">
+                <a href="photo2.jpg" target="_blank">
+                    <img src="photo2.jpg" alt="Photo 2">
+                </a>
+            </div>
+            <div class="photo-item">
+                <a href="photo3.jpg" target="_blank">
+                    <img src="photo3.jpg" alt="Photo 3">
+                </a>
+            </div>
+            <div class="photo-item">
+                <a href="photo4.jpg" target="_blank">
+                    <img src="photo4.jpg" alt="Photo 4">
+                </a>
+            </div>
+            <div class="photo-item">
+                <a href="photo5.jpg" target="_blank">
+                    <img src="photo5.jpg" alt="Photo 5">
+                </a>
+            </div>
+
+            <div class="photo-item">
+                <a href="photo6.jpg" target="_blank">
+                    <img src="photo6.jpg" alt="Photo 6">
+                </a>
+            </div>
+
+        </div>
+
+        <br><br><br><br><br>
+        <footer>
+            <p> &copy; 2026 All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
